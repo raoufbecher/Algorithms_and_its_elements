@@ -1,0 +1,28 @@
+ALGORITHM algorithm_name
+VAR
+   sentence:STRING;
+   c,words-number,vowel:INTEGER:=0;
+BEGIN
+  write("write the sentence.");
+  read(sentence);
+   FOR i FROM 1 TO sentence.length STEP 1  DO
+   IF (sentence[i]=" ") THEN
+      words_number:=words_number +1;
+   END_IF
+   
+   IF (sentence[i]="a" OR sentence[i]="e" OR sentence[i]="i" OR sentence[i]="o" or sentence[i]="y" OR sentence[i]="u") THEN
+      vowel:=vowel+1;
+   END_IF
+
+   IF (sentence[i]<>".") THEN
+      c:=c+1;
+   ELSE 
+    BREAK;
+   END_IF
+   
+   END_FOR
+
+   write("words number=", words-number);
+   write("vowel number=", vowel);
+   write("caracter number=", c);
+END
